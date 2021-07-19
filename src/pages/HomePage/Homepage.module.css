@@ -1,0 +1,161 @@
+.title {
+  position: relative;
+  z-index: 2;
+  font-family: "Fredoka One", cursive;
+  text-transform: uppercase;
+  font-size: 43px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 56px;
+  letter-spacing: 0.3rem;
+  color: #ffffff;
+}
+
+/* Section hero */
+.titleHero {
+  composes: title;
+  position: relative;
+  z-index: 2;
+  max-width: 450px;
+}
+
+.descriptionContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.description {
+  position: relative;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  z-index: 1;
+  max-width: 30%;
+  text-align: right;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.desrcHeroBackground {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -175px;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  background-color: rgba(132, 166, 119, 0.8);
+}
+
+
+.buttonContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+}
+
+
+
+/* Section About  */
+
+.backgroundContainer {
+  position: relative;
+  background-image: url("../../images/background-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backgroundContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.7) 43%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+}
+
+.titleAbout {
+  composes: title;
+  margin-bottom: 60px;
+  color: rgba(102, 102, 102, 1);
+  width: 100%;
+  text-align: right;
+}
+
+
+.descrAboutContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.descrAboutContainer::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -35%;
+  z-index: 1;
+  width: 470px;
+  height: 380px;
+  background-image: url("../../images/cracker-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.descrAbout {
+  position: relative;
+  z-index: 3;
+  padding: 40px 0;
+  padding-left: 60px;
+  max-width: 625px;
+  text-align: justify;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgb(51, 51, 51);
+}
+
+.desrcAboutBackground {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -1;
+  background-color: rgba(212, 187, 178, 0.6);
+}
+
+.descrAbout::before {
+  content: "Cracker";
+  position: absolute;
+  
+  bottom: -5px;
+  right: -66px;
+
+  font-family: 'Kristi', cursive;
+  font-size: 74px;
+}
+
+
+/* Section constructor */
+.titleConstructor {
+composes: title;
+color: rgba(51, 51, 51, 1);
+width: 100%;
+text-align: center;
+}

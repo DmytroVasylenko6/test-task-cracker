@@ -1,0 +1,106 @@
+.panelContainer {
+  width: 100%;
+  background-color: rgb(51, 51, 51);
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.crackerCount,
+.totalContainer,
+.detailsContainer {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #ffffff;
+  padding: 15px 0;
+}
+
+.crackerCount {
+  position: relative;
+  top: 5px;
+}
+
+.imageCount {
+  width: 30px;
+  height: 30px;
+}
+
+.textCount {
+  position: absolute;
+  top: 7px;
+  right: -11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  height: 15px;
+  width: 15px;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: #ff2c2c;
+}
+
+.totalContainer {
+  margin-left: 50px;
+}
+
+.detailsContainer {
+  margin-left: 50px;
+  position: relative;
+  background: none;
+  padding-right: 25px;
+  border: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.detailsContainer:hover .contactListContainer,
+.detailsContainer:focus .contactListContainer {
+  opacity: 1;
+  z-index: 100;
+}
+
+.detailsContainer::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 5px;
+  width: 8px;
+  height: 8px;
+  transform: translateY(-40%) rotate(135deg);
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+}
+
+.contactListContainer {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 1px 5px 12px 2px rgba(0, 0, 0, 0.39);
+}
+
+.contactListContainer:hover,
+.contactListContainer:focus {
+  opacity: 1;
+  z-index: 100;
+}
+
+.emptyBasker {
+  padding: 5px 50px;
+  background: #ffffff;
+  color: #333333;
+}
